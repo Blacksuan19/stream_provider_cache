@@ -30,7 +30,7 @@ class GridItemModel extends Jsonable {
 ///
 /// implementations of [operator ==] and [hashCode] are required by riverpod to
 ///
-/// differentiate between different instances of the same provider,w
+/// differentiate between different instances of the same provider
 class GridItemsProviderArgs {
   final SharedPrefKey prefsKey;
   final SharedPrefKey refreshKey;
