@@ -44,3 +44,9 @@ lib
     ├── utils
     └── widgets
 ```
+
+## Previews
+
+|                                           |                                           |                                           |
+| :---------------------------------------: | :---------------------------------------: | :---------------------------------------: |
+| <img src="./previews/home.png"> Home Page | <img src="./previews/grid.png"> Grid Page | <img src="./previews/item.png"> Item Page |
