@@ -21,20 +21,19 @@ SharedPreferences for caching provider values.
 
 ## Considerations
 
-the data model that needs to be cached must implement:
+the data model that needs to be cached must implement below methods to be able
+to serialize and deserialize the model.
 
-- `Map<String, dynamic> toJson();`
-- `Object.fromJson(Map<String, dynamic> json);`
+- `Map<String, dynamic> toJson()`
+- `Object.fromJson(Map<String, dynamic> json)`
 
 when using provider families with multiple arguments, the model used as provider
-arguments needs to implement:
+arguments needs to implement below methods for riverpod to be able to
+differentiate between provider instances, check `GridItemsProviderArgs`
+implementation in [grid_item.dart](./lib/src/models/grid_item.dart) file.
 
-- `bool operator ==(Object other)` operator method.
-- `int hasCode()` method
-
-for riverpod to be able to differentiate between provider instances, check
-`GridItemsProviderArgs` implementation in
-[grid_item.dart](./lib/src/models/grid_item.dart) file.
+- `bool operator ==(Object other)`
+- `int get hasCode`
 
 ## Dependencies
 
