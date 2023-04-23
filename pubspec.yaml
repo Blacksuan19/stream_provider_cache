@@ -1,5 +1,5 @@
 name: stream_provider_cache
-description: A new Flutter project.
+description: A simple flutter application to demo caching stream provider with shared preferences.
 publish_to: "none"
 version: 1.0.0+1
 
