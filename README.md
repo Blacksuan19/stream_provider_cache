@@ -10,6 +10,15 @@ SharedPreferences for caching provider values.
 - generic methods to access and update providers.
 - generic methods to access and update shared preferences.
 
+## Caching Process
+
+- fetch provider value from cache.
+- start adding new items from last cached item.
+- if no cached items, start adding new items from the beginning.
+- cache items in shared preferences.
+- filter items according to search provider value.
+- return list of items filtered.
+
 ## Considerations
 
 the data model that needs to be cached must implement:
