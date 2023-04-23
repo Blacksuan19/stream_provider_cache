@@ -24,6 +24,9 @@ final gridItemsProviderFamily = StreamProvider.autoDispose
       GridItemModel(index: i, code: UniqueKey().hashCode),
     ];
 
+    // cache items to shared preferences
+    await cacheItems(key: args.prefsKey, items: allItems);
+
     // filter items based on the filter provider
     allItems = filterItems(
       ref: ref,
@@ -31,8 +34,6 @@ final gridItemsProviderFamily = StreamProvider.autoDispose
       items: allItems,
     );
 
-    // cache items to shared preferences
-    await cacheItems(key: args.prefsKey, items: allItems);
     yield allItems;
   }
 });
