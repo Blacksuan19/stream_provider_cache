@@ -32,3 +32,15 @@ for riverpod to be able to differentiate between provider instances, check
 - flutter_riverpod
 - shared_preference
 - easy_search_bar
+
+## Directory Structure
+
+```bash
+lib
+└── src
+    ├── models
+    ├── pages
+    ├── services
+    ├── utils
+    └── widgets
+```
