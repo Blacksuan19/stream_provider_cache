@@ -38,7 +38,7 @@ class SearchAppBar extends ConsumerWidget with PreferredSizeWidget {
           systemNavigationBarDividerColor: AppTheme.accentColor,
           systemNavigationBarIconBrightness: Brightness.light,
         ),
-        onSearch: (value) => setProviderState(
+        onSearch: (value) => setProviderState<String>(
           ref: ref,
           provider: searchValueProvider,
           newState: value,
