@@ -18,7 +18,7 @@ void setProviderState<StateType>({
 /// get a given [provider] state of type [StateType]
 /// [watch] is used to determine if the provider should be read or watched
 StateType getProviderState<StateType>({
-  required WidgetRef ref,
+  required ref,
   required String provider,
   bool watch = false,
 }) {
