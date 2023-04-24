@@ -18,11 +18,18 @@ final gridItemsProviderFamily = StreamProvider.autoDispose
     // small delay to simulate network latency
     await Future.delayed(const Duration(milliseconds: 500));
 
+    // generate a unique key for each item
+    final uniqueKey = UniqueKey().hashCode;
+
+    // check if the item is already in the cache
+    // this is an extra check to avoid duplicates if index is off
+    if (allItems.any((element) => element.code == uniqueKey)) {
+      yield allItems;
+      continue;
+    }
+
     // add new items to the stream
-    allItems = [
-      ...allItems,
-      GridItemModel(index: i, code: UniqueKey().hashCode),
-    ];
+    allItems = [...allItems, GridItemModel(index: i, code: uniqueKey)];
 
     // cache items to shared preferences
     await cacheItems(key: args.prefsKey, items: allItems);
