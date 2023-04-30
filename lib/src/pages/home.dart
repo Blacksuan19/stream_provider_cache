@@ -49,9 +49,17 @@ class Home extends ConsumerWidget {
                   );
                 },
               ),
-              const Text(
-                "Force Refresh Provider Cache",
-                style: TextStyles.body,
+              Column(
+                children: const [
+                  Text(
+                    "Force Refresh Provider Cache",
+                    style: TextStyles.body,
+                  ),
+                  Text(
+                    "(Default riverpod behavior with `autoDispose` enabled)",
+                    style: TextStyles.caption,
+                  ),
+                ],
               ),
             ],
           ),
